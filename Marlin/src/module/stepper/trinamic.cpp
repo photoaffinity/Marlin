@@ -797,7 +797,7 @@ void reset_trinamic_drivers() {
   #endif
 
   #ifdef TMC_ADV
-    TMC_ADV()
+    TMC_ADV() { stepperE0.en_spreadCycle(true); }
   #endif
 
   stepper.set_directions();
